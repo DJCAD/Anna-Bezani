@@ -1,0 +1,37 @@
+int green = 13;
+int red = 12;
+
+void setup() {
+
+pinMode(red,OUTPUT);
+pinMode(green,OUTPUT);
+    // define the red and green LEDs to be output mode.
+
+}
+
+void loop() {
+changeLights();
+delay(1000);
+   // put your main code here, to run repeatedly:
+}
+
+void changeLights(){
+// green off, red for 3 seconds
+digitalWrite(green,HIGH);
+delay(1000);
+digitalWrite(green,LOW);
+
+// turn off green, then turn red on for 5 seconds
+
+digitalWrite(red,HIGH);
+delay(1000);
+digitalWrite(red,LOW);
+
+// red and green on for 2 seconds (red is already on though)
+digitalWrite(green,HIGH);
+digitalWrite(red,HIGH);
+delay(1000);
+
+digitalWrite(red,LOW);
+digitalWrite(green,LOW);
+}
