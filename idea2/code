@@ -1,0 +1,46 @@
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
+
+void setup() {
+  
+//servo pin for the movement
+  myservo.attach(8);  
+
+
+  // code for the noise tone and delay
+  
+tone(9,262,400); //(outputPIN),note,length)
+delay(5);
+tone(9,196,125); 
+delay(162.5);
+tone(9,196,125); 
+delay(325);
+tone(9,220,250); 
+delay(325);
+tone(9,196,250);
+delay(325);
+tone(9,0,250);
+delay(325);
+tone(9,247,250);
+delay(325);
+tone(9,262,250);
+delay(325);
+noTone(9); //Turn off the sound 
+}
+
+void loop() {
+    for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(1000);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(1000);                       // waits 15ms for the servo to reach the position
+  }
+}
