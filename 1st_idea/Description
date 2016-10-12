@@ -1,1 +1,5 @@
 
+
+This prototype is about controlling the temperature for the pasta. A lot of people overcook pasta. 
+The solution would be an app that can tell you when the pasta is ready and al dente.The LEDS are green and red.As the pasta is cooking
+the lights are keep changing but when the pasta is ready then the Green light will be on and the red light off
